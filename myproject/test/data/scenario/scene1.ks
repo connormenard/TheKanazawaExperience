@@ -1,6 +1,9 @@
 [_tb_system_call storage=system/_scene1.ks]
 
+*INTRO
+
 [tb_start_tyrano_code]
+;INTRO
 ;[title name="The Kanazawa Experience"]
 [bg storage=IMG_hakubaso2.jpg time=1200 wait=true method=explode]
 [call target=*showMessageBox]
@@ -42,8 +45,13 @@ You chose Connor[l][r]
 [cm]では、始めよう[l][r]
 Now then, let's begin.[l][r]
 [cm]
+[_tb_end_tyrano_code]
 
+*Route_Yuqi
+
+[tb_start_tyrano_code]
 ;;YUQI ROUTE
+;Opening
 [if exp="f.route=='yuqi'"]
 [bg storage=IMG_akiba.JPG time=1200 wait=true method=explode]
 #ユチ
@@ -100,6 +108,9 @@ It was so expensive！Ah! I should have taken the railroad.[l][r]
 [eval exp="f.arrivalVehicle='taxi'"]
 [eval exp="f.arrivalVehicleJP='タクシー'"]
 @jump target=*jyArriveAtRoom
+[_tb_end_tyrano_code]
+
+[tb_start_tyrano_code]
 *jyArriveAtRoom
 [cm]
 [bg storage=IMG_hakubaso.jpg time=1200 wait=true method=blind]
@@ -182,7 +193,9 @@ Nice to meet you! My name is Tomoe. I am 20 years old and sophomore.[l][r]
 [freeimage layer=1 page=fore][image storage="default/YuqiHappy.png" layer=1 page=fore visible=true width="419"  height="744"  x="290"  y="-104" ]
 Nice to meet you![l][r]
 [cm]
+[_tb_end_tyrano_code]
 
+[tb_start_tyrano_code]
 ;ARRIVED AT ROOM
 #ユチ
 [font color=orange]
@@ -365,6 +378,9 @@ Ah... It's raining.[l][r]
 中に入りましょう。[l][r]
 Let us go inside.[l][r]
 [cm]
+[_tb_end_tyrano_code]
+
+[tb_start_tyrano_code]
 ;BACK INSIDE HAKUBASO, AWAY FROM THE RAIN
 [bg storage=IMG_tatami.JPG time=1200 wait=true method=crossfade]
 #ともえ
@@ -422,6 +438,9 @@ See you! [l][r]
 [cm]
 [freeimage layer=1 page=fore]
 [bg storage=kuro.jpg time=1200 wait=true method=crossfade]
+[_tb_end_tyrano_code]
+
+[tb_start_tyrano_code]
 ;THE NEXT DAY... DO A FADE OUT TRANSITION HERE
 #ガイド
 [font color=white]
@@ -466,7 +485,9 @@ I’m going to the market for breakfast. Do you want to go?[l][r]
 いいですよ、行きましょう。[l][r]
 Ok. Let's go.[l][r]
 [cm]
+[_tb_end_tyrano_code]
 
+[tb_start_tyrano_code]
 ;AT THE CONBINI
 [bg storage=IMG_conbini.JPG time=1200 wait=true method=explode]
 #ユチ
@@ -639,6 +660,9 @@ Understood! Here is you change, 577 yen. Do you need a receipt? [l][r]
 Understood! Here is your change.[l][r]
 [cm]
 [freeimage layer=1 page=fore]
+[_tb_end_tyrano_code]
+
+[tb_start_tyrano_code]
 ;;FADE OUT TRANSITINON, MENTION THAT SCHOOL IS OVER...
 [bg storage=kuro.jpg time=400 wait=true method=crossfade]
 #ガイド
@@ -760,6 +784,10 @@ Well, let me tell you how to take a bus.[l][r]
 Please![l][r]
 [cm]
 [bg storage=IMG_bus.JPG time=1200 wait=true method=explode]
+
+[_tb_end_tyrano_code]
+
+[tb_start_tyrano_code]
 ;;TRANSITION TO BUS STOP
 #ともえ
 [font color=pink]
@@ -901,6 +929,9 @@ If you do not have enough coins, use the changing machine. It is easy to use. [l
 Finally, put the coins into the machine before getting off.[l][r]
 [cm]
 @jump target=*jyArriveAtInari
+[_tb_end_tyrano_code]
+
+[tb_start_tyrano_code]
 *jyArriveAtInari
 [bg storage=IMG_fushimi.jpg time=1200 wait=true method=crossfade]
 [freeimage layer=1 page=fore][image storage="default/YuqiHappy.png" layer=1 page=fore visible=true width="419"  height="744"  x="290"  y="-104" ]
@@ -915,7 +946,11 @@ The end.[l][cm]
 [iscript]
 f.temp=(f.route=='jia');
 [endscript]
+[_tb_end_tyrano_code]
 
+*Route_Jia
+
+[tb_start_tyrano_code]
 ;;JIA ROUTE
 [elsif exp="f.route=='jia'"]
 [cm]
@@ -929,7 +964,7 @@ I’m not even good at basketball, but since I’m in Japan, might as well try s
 [font color=orchid]
 Well, lets head over to the Sports Kobo…[l][r]
 [cm]
-#
+#ジア
 [freeimage layer=1 page=fore]
 [image storage="default/JiaEmbarressed.png" layer=1 page=fore visible=true width="419"  height="744"  x="290"  y="-104" ]
 [font color=orchid]
@@ -1243,7 +1278,9 @@ Kentarou’s eyes widen and makes a very uncomfortable face for a second, turns 
 [cm]
 #ガイド
 [font color=white]
+[_tb_end_tyrano_code]
 
+[tb_start_tyrano_code]
 ;FADE OUT
 [freeimage layer=1 page=fore]
 [bg storage=kuro.jpg time=1200 wait=true method=crossfade]
@@ -1471,6 +1508,10 @@ I thought that is what I said…. [l][cm]
 “Sure, that sounds nice. I am free right now. I know a good restaurant we can go to.”[l][cm]
 @jump target=*jjDinnerResult
 *jjDinnerResult
+
+[_tb_end_tyrano_code]
+
+[tb_start_tyrano_code]
 #ガイド
 [freeimage layer=1 page=fore]
 [image storage="default/JiaTalking.png" layer=1 page=fore visible=true width="419"  height="744"  x="290"  y="-104" ]
@@ -1645,7 +1686,9 @@ Both of you have a very good time.[l][cm]
 [font color=white]
 After dinner, you and Kentarou head outside of the Restaurant. [l][cm]
 [bg storage=IMG_street.jpg time=1200 wait=true method=explode]
+[_tb_end_tyrano_code]
 
+[tb_start_tyrano_code]
 ;;ENDINGS
 ;STUPID JS HACKY SOLUTION IS PROBABLY FASTER
 [eval exp="f.ending='normal'"]
@@ -1854,7 +1897,11 @@ What a terrible ending! Try again next time![l][cm]
 [cm]終わりです。[l][r]
 The end.[l][cm]
 @jump target=*jMainMenu
+[_tb_end_tyrano_code]
 
+*Route_Connor
+
+[tb_start_tyrano_code]
 ;;CONNOR ROUTE
 [elsif exp="f.route=='connor'"]
 #ガイド
@@ -1865,6 +1912,8 @@ The end.[l][cm]
 [_tb_end_tyrano_code]
 
 [s  ]
+*MESSAGE_BOX_SHORTCUTS
+
 [tb_start_tyrano_code]
 *hideMessageBox
 [_tb_end_tyrano_code]
